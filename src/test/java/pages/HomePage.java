@@ -29,4 +29,9 @@ public class HomePage {
     @FindBy(xpath = "//input[@id='firstName']")
     public WebElement registirationFirstName;
 
+
+    //GRUP
+    @FindBy (xpath = "(//span[text()='Sign in'])[3]")
+    public WebElement signInButton;
+    ////*[text()='Failed to sign in!']
 }

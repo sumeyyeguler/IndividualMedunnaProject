@@ -56,10 +56,18 @@ public class US001 {
         Assert.assertEquals(feedback,homePage.registrationSSNFeedbackText.getText());
     }
 
+    //
+    @And("Kullanici SSN'i bos biraktiginda Your SSN is invalid. uyarisinin gorunur oldugunu test eder.")
+    public void kullaniciSSNIBosBiraktigindaYourSSNIsInvalidUyarisininGorunurOldugunuTestEder() {
+        String uyari="Your SSN is required.";
+        homePage.registrationSSN.click();
+        homePage.registirationFirstName.click();
+        Assert.assertTrue(homePage.registrationSSNFeedbackText.isDisplayed());
+    }
+
     //After
     @And("sayfayi kapatir.")
     public void sayfayiKapatir() {
     }
-
 
 }

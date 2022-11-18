@@ -28,3 +28,7 @@ Feature: US001 Register
       | 12423555     | Your SSN is invalid |
       | 124-78500    | Your SSN is invalid |
       | 129-73-34218 | Your SSN is invalid |
+
+    @wip3
+    Scenario: TC03 SSN bos birakilamaz
+    And Kullanici SSN'i bos biraktiginda Your SSN is invalid. uyarisinin gorunur oldugunu test eder.
