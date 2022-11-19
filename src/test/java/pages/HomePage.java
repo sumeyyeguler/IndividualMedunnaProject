@@ -7,16 +7,19 @@ import utilities.Driver;
 
 public class HomePage {
 
-    public HomePage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public HomePage() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     //HomePage
-    @FindBy (xpath = "//a[@class='d-flex align-items-center dropdown-toggle nav-link']")
+    @FindBy(xpath = "//a[@class='d-flex align-items-center dropdown-toggle nav-link']")
     public WebElement dropDownLoginIcon;
 
     @FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
     public WebElement dropDownRegister;
+
+    @FindBy(xpath = "//*[text()='Sign in']")
+    public WebElement iconSigninButton;
 
     //Register
     @FindBy(xpath = "//input[@name='ssn']")
@@ -29,9 +32,22 @@ public class HomePage {
     @FindBy(xpath = "//input[@id='firstName']")
     public WebElement registirationFirstName;
 
+    //Sign In
+    @FindBy (xpath = "//input[@id='username']")
+    public WebElement signinUsernameTextBox;
+
+    @FindBy (xpath = "//input[@id='password']")
+    public WebElement signinPasswordTextBox;
+
+    @FindBy(xpath = "(//span[text()='Sign in'])[3]")
+    public WebElement signInLoginButton;
+
+    //Account succesfully login page
+    @FindBy(xpath = "//h1")
+    public WebElement welcomeToMedunnaText;
+
 
     //GRUP
-    @FindBy (xpath = "(//span[text()='Sign in'])[3]")
-    public WebElement signInButton;
+
     ////*[text()='Failed to sign in!']
 }
