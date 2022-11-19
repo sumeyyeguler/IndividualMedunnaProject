@@ -4,9 +4,12 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.devtools.v85.network.model.DataReceived;
 import pages.HomePage;
 import utilities.ConfigReader;
+import utilities.Driver;
 
+import java.awt.image.DirectColorModel;
 import java.util.List;
 
 public class US010 {
@@ -24,7 +27,7 @@ public class US010 {
 
     @And("Kullanici Doktor olarak gecerli password girer")
     public void kullaniciDoktorOlarakGecerliPasswordGirer() {
-        homePage.signinUsernameTextBox.sendKeys(ConfigReader.getProperty("doktorGecerliPassword"));
+        homePage.signinPasswordTextBox.sendKeys(ConfigReader.getProperty("doktorGecerliPassword"));
 
     }
     @And("Kullanici Login icin signin butonuna tiklar")
@@ -50,11 +53,11 @@ public class US010 {
     @Then("Kullanici randevu listesinin gorunur oldugunu test eder")
     public void kullaniciRandevuListesininGorunurOldugunuTestEder() {
         Assert.assertTrue(homePage.appointmentText.isDisplayed());
-        List<WebElement> appointmentList=homePage.appointmentList;
-        System.out.println("appointmentList = " + appointmentList);
+        List<WebElement>appointmentList=homePage.appointmentList;
         for (int i = 0; i <appointmentList.size() ; i++) {
-            Assert.assertTrue(appointmentList.get(i).isDisplayed());
+           Assert.assertTrue( appointmentList.get(i).isDisplayed());
         }
+
 
     }
 
@@ -66,20 +69,24 @@ public class US010 {
 
     @Then("Kullanici patient id, start date, end date, status bilgilerini gorunur oldugunu test eder")
     public void kullaniciPatientIdStartDateEndDateStatusBilgileriniGorunurOldugunuTestEder() {
-
+        List<WebElement>appointmentHeaderList=homePage.appointmentHeaderList;
+        for (int i = 0; i <appointmentHeaderList.size() ; i++) {
+            Assert.assertTrue(appointmentHeaderList.get(i).isDisplayed());
+        }
     }
 
     @And("{int} sn beklenir")
-    public void snBeklenir(int arg0) {
-    }
-
-
-    @And("Sayfa kapatilir.")
-    public void sayfaKapatilir(int saniye) {
+    public void snBeklenir(int saniye) {
         try {
             Thread.sleep(saniye*1000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+
+
+    @And("Sayfa kapatilir.")
+    public void sayfaKapatilir() {
+        Driver.closeDriver();
     }
 }
