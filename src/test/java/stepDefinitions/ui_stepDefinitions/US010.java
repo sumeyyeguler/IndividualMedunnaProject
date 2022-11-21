@@ -1,5 +1,6 @@
 package stepDefinitions.ui_stepDefinitions;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -89,4 +90,5 @@ public class US010 {
     public void sayfaKapatilir() {
         Driver.closeDriver();
     }
+
 }

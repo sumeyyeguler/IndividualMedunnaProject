@@ -14,6 +14,7 @@ import org.junit.runner.RunWith;
 )
 
 public class Runner {
+
     /*
     Bir framework'de bir tek Runner class'i yeterli olabilir
     Runner class'inda class body'sinde hic bir sey olmaz

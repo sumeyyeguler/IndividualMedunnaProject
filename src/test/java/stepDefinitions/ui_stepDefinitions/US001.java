@@ -1,5 +1,6 @@
 package stepDefinitions.ui_stepDefinitions;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -68,6 +69,7 @@ public class US001 {
     //After
     @And("sayfayi kapatir.")
     public void sayfayiKapatir() {
+
     }
 
 }

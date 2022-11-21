@@ -16,6 +16,7 @@ Feature: US010 Doktor (Physician) randevulari
   Scenario: TC001 Doktor, randevu listesini ve zaman dilimlerini "My Appointments" sekmesinden gorebilmelidir.
     Then Kullanici randevu listesinin gorunur oldugunu test eder
     Then Kullanici zaman dilimlerinin gorunur oldugunu test eder
+    And 3 sn beklenir
     And Sayfa kapatilir.
 
   @US010_TC002
