@@ -36,5 +36,5 @@ Feature: US001 Register
   @US001_TC004
   Scenario: Herhangi bir karakter içeren ve boş bırakılamayan geçerli bir "First Name" olmalıdır.
     And Kullanici herhangi bir karakter iceren ve bos birakilamayan gecerli bir First Name girer.
-    Then Kullanici Firstname'i bos biraktiginda Your FirstName is required. uyarisinin gorunmedigini test eder.
-    Then Kullanici Firstname'i bos biraktiginda Your FirstName is required. uyarisinin gorunmedigini test eder.
+    Then Kullanici Firstname'i girdiginde Your FirstName is required. uyarisinin gorunmedigini test eder.
+

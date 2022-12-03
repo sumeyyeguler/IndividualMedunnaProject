@@ -2,7 +2,9 @@ package stepDefinitions.ui_stepDefinitions;
 
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.devtools.v85.network.model.DataReceived;
@@ -90,5 +92,6 @@ public class US010 {
     public void sayfaKapatilir() {
         Driver.closeDriver();
     }
+
 
 }
