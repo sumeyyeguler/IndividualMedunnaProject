@@ -42,7 +42,7 @@ public class api10 {
 
         //deneme
         //deneme
-        // FIXME: 3.12.2022 
+        
 
 
     }
