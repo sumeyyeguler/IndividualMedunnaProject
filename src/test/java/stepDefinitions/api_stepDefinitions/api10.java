@@ -40,8 +40,7 @@ public class api10 {
         Assert.assertEquals("2022-11-21T01:00:00Z", actualAppointment.getEndDate());
         Assert.assertEquals("CANCELLED", actualAppointment.getStatus());
 
-        //deneme
-        //deneme
+      
         
 
 
