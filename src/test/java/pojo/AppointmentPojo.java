@@ -1,4 +1,4 @@
-package pojo;
+
 
 public class AppointmentPojo {
 
