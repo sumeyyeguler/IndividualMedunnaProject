@@ -17,7 +17,7 @@ import java.util.List;
 
 public class US010 {
 
-    
+    HomePage homePage=new HomePage();
     @And("Kullanici signin butonuna tiklar")
     public void kullaniciSigninButonunaTiklar() {
         homePage.iconSigninButton.click();
